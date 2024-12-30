@@ -1,0 +1,31 @@
+# Ignorar credenciais sensíveis
+credentials.json
+token.pickle
+
+# Arquivos e pastas do ambiente virtual Python
+venv/
+.env
+__pycache__/
+*.py[cod]
+
+# Arquivos do Docker
+*.log
+docker-compose.override.yml
+.env.docker
+
+# Arquivos de cache e logs
+*.log
+*.sqlite3
+*.pyc
+
+# Configurações do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Pastas e arquivos gerados pelo IDE
+.idea/
+.vscode/
+*.swp
+
+# Outros arquivos desnecessários
+*.bak

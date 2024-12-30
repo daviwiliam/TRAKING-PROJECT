@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NPP8TQFL');
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Local</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPP8TQFL" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <h3 class="title-app">Registrar Ação</h3>
+    <form id="eventoForm">
+        <br>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="basic-addon1">Nome</span>
+            <input type="text" class="form-control" placeholder="Digite o nome" aria-label="Digite o nome"
+                aria-describedby="basic-addon1" id="nome" name="nome" required>
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="basic-addon1">Ação</span>
+            <input type="text" class="form-control" placeholder="Digite a ação" aria-label="Digite a ação"
+                aria-describedby="basic-addon1" id="acao" name="acao" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Enviar</button>
+        <br>
+    </form>
+    <h3 class="title-app">Dados do Google Sheets em gráficos</h3>
+    <br>
+    <button class="btn btn-primary" onclick="fetchData()">Carregar Dados</button>
+    <div class="chart-container">
+        <canvas id="myChart"></canvas> <!-- Gráfico de pizza -->
+        <canvas id="myChartBar"></canvas> <!-- Gráfico de barras -->
+    </div>
+    <br>
+    <script src="script.js"></script>
+</body>
+
+</html>
